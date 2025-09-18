@@ -28,4 +28,5 @@ while game:
     answer = input(f"{nickname}, чи хотів би ти зіграти ще? (Y/N): ").lower()
     if answer == "n":
         game = False
+
         print(f"{nickname}, дякую за гру!")
