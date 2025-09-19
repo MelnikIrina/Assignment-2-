@@ -25,7 +25,8 @@ while game:
         else:
             print("Випив ? - За гру не сідай. Пиши тільки цифри)")
 
-    answer = input(f"{nickname}, чи хотів би ти зіграти ще? (Y/N): ").lower()
+    print(f"{nickname}, чи хотів би ти зіграти ще?")
+    answer = input("Y/N): ").lower()
     if answer == "n":
         game = False
         print(f"{nickname}, дякую за гру!")
