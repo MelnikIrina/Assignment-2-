@@ -25,5 +25,4 @@ while game:
                     game = False
         else:
             print("Випив ? - За гру не сідай. Пиши тільки цифри)")
-
 print(f"{nickname}, дякую за гру!")
