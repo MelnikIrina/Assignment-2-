@@ -18,6 +18,7 @@ while game:
             elif guess > secret_number:
                 print("- число менше!")
             else:
+
                 print(f"Молодець,! Ти вгадав число {secret_number} з {a} спроби")
                 print(f"{nickname}, чи хотів би ти зіграти ще?")
                 answer = input("Y/N): ").lower()
