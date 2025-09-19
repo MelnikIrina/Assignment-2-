@@ -1,14 +1,12 @@
 from random import randint
 
 nickname = input("Ти увімкнув гру <Вгадай число>. Тож тепер придумай собі ім'я: ")
+print(f"Супер, {nickname}! Я загадав число від 1 до 50. Спробуй вгадати!")
 
+secret_number = randint(1,50)
+a = 0  # лічильник спроб
 game = True
 while game:
-    print(f"Супер, {nickname}! Я загадав число від 1 до 50. Спробуй вгадати!")
-    secret_number = randint(1, 50)
-    a = 0
-
-    while True:
         user_input = input("Введи свій варіант: ")
 
         if user_input.isdigit():  # перевірка, чи це число
@@ -21,11 +19,11 @@ while game:
                 print("- число менше!")
             else:
                 print(f"Молодець,! Ти вгадав число {secret_number} з {a} спроби")
-                break
+                print(f"{nickname}, чи хотів би ти зіграти ще?")
+                answer = input("Y/N): ").lower()
+                if answer == "n":
+                    game = False
         else:
             print("Випив ? - За гру не сідай. Пиши тільки цифри)")
 
-    answer = input(f"{nickname}, чи хотів би ти зіграти ще? (Y/N): ").lower()
-    if answer == "n":
-        game = False
-        print(f"{nickname}, дякую за гру!")
+print(f"{nickname}, дякую за гру!")
